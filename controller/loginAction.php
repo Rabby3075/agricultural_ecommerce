@@ -28,11 +28,25 @@ if (!$flag){
     if($res){
         
         session_start();
+        $_SESSION['name'] = $res['name'];
+        $_SESSION['fname'] = $res['fname'];
+        $_SESSION['mname'] = $res['mname'];
+        $_SESSION['gender'] = $res['gender'];
+        $_SESSION['religion'] = $res['religion'];
+        $_SESSION['dob'] = $res['dob'];
+        $_SESSION['phone'] = $res['phone'];
+        $_SESSION['nid'] = $res['nid'];
         $_SESSION['uname'] = $uname;
+        $_SESSION['email'] = $res['email'];
+        $_SESSION['pass'] = $pass;
+        $_SESSION['image'] = $res['image'];
+        echo "<h2 style='color: green;'>Login done successfully</h2>";
+        sleep(5);
         header("location:../view/dashbord.php");
     }
     else{
-        echo "Invalid username or password";
+       // sleep(30);
+        echo "<h2 style='color: red;'>Login Failed</h2>";
     }
 }
 ?>
