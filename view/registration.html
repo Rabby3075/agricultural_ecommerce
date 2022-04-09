@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../view/css/regStyle.css">
+    <script src="../view/js/registration.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form action="../controller/registerAction.php" method="post" enctype="multipart/form-data" name="form" onsubmit="ajax(this); return false;">
+       
+            <span>*</span>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name">
+            <span id="nameError"></span> <br><br>
+            <span>*</span>
+            <label for="fname">Father's Name</label>
+            <input id="fname" type="text" name="fname">
+            <span id="fnameError"></span> <br><br>
+            <span>*</span>
+            <label for="mname">Mother's Name</label>
+            <input id="mname" type="text" name="mname">
+            <span id="mnameError"></span> <br><br>
+            <span>*</span>
+            Gender <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label>
+	<input type="radio" name="gender" id="female" value="female">  <label for="female">Female</label>
+    <span id="genderError"></span> <br><br>
+    <span>*</span>
+            <label for="fname">Religion</label>
+            <select id="religion" name="religion" id="religion">
+
+                <option value="muslim">Muslim</option>
+                <option value="hindu">Hindu</option>
+                <option value="cristian">Cristian</option>
+                <option value="buddha">Buddha</option>
+            </select>
+            <span id="religionError"></span> <br><br>
+            <span>*</span>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+            <span id="dobError"></span><br><br>
+            <span>*</span>
+            <label for="phone">Phone No</label>
+            <input type="number" name="phone" id="phone">
+            <span id="phoneError"></span><br><br>
+            <span>*</span>
+            <label for="nid">NID</label>
+            <input type="number" name="nid" id="nid">
+            <span id="nidError"></span><br><br>
+            <span>*</span>
+            <label for="uname">Username</label>
+            <input id="uname" type="text" name="uname">
+            <span id="unameError"></span> <br><br>
+            <span>*</span>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <span id="emailError"></span><br><br>
+            <span>*</span>
+            <label for="pass">Password</label>
+            <input id="pass" type="password" name="pass"> 
+            <span id="passError"></span><br><br>
+            <span>*</span>
+            <label for="cpass">Confirm Password</label>
+            <input id="cpass" type="password" name="cpass"> 
+            <span id="cpassError"></span><br><br>
+            <span>*</span>
+            <label for="image">Upload an Image</label>
+            <input type="file" name="image" id="image">
+            <span id="imageError"></span><br><br>
+            <input class="submit" type="submit" value="Register">
+            <a href="../view/login.html">If you have any account then login here</a>
+            <h2 id="msg"></h2>
+    </form>
+   
+</body>
+</html>
