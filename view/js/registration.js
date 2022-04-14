@@ -1,4 +1,5 @@
 function validation(val){
+	//value initialization
     var name = val.name.value;
     var fname = val.fname.value;
     var mname = val.mname.value;
@@ -21,7 +22,7 @@ function validation(val){
     var cpass = val.cpass.value;
 	var image = val.image.value;
 	var flag = true;
-
+// js validation
     if(name==="")
 	{
 	   document.getElementById('nameError').innerHTML="Field can't be empty";
@@ -85,8 +86,9 @@ function validation(val){
 		flag = false;
 	}
   
-return flag;
+return flag; //if validate then return true if not then false;
 }
+//ajax part
 function ajax(pform) {
 	// body...
 	var isValid=validation(pform);
@@ -108,10 +110,10 @@ function ajax(pform) {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onload = function(){
 			if (this.status===200) {
-				  document.getElementById("msg").innerHTML = this.responseText;
+				  document.getElementById("msg").innerHTML = this.responseText; //msg id jekhane oikhane php theke ja echo hoito ota show korbe
 			}
 		}
-		xhttp.open("post","../controller/registerAction.php");
+		xhttp.open("post","../controller/registerAction.php"); //connected with backend
 		//xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		//xhttp.send("fname="+pform.fname.value+"&lname="+pform.lname.value+"&gender="+pform.gender.value+"&dob="+pform.dob.value+"&religion="+pform.religion.value+"&praddress="+pform.praddress.value+"&peaddress="+pform.peaddress.value+"&phoneNumber="+pform.phoneNumber.value+"&mail="+pform.mail.value+"&userName="+pform.userName.value+"&password="+pform.password.value+"&image="+pform.image.value);
 		xhttp.send(fd);

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+.header{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+}
+.welcome-text h1{
+    display: inline;
+    
+    color: white;
+}
+.welcome-text{
+    text-align: right;
+    margin-right: 10px;
+}
+.logo h1{
+    display: inline;
+    color: white;
+}
+.logo{
+    margin-left: 10px;
+}
+
+.menubar{
+    background-color: #9900F0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.menubar ul{
+    display: inline-flex;
+    list-style: none;
+}
+.menubar ul li{
+    width: 120px;
+    margin: 5px;
+    padding: 5px;
+   
+}
+.menubar ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.menubar ul li:hover{
+    background-color: #000000;
+}

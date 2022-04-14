@@ -1,9 +1,10 @@
 body{
-    background-color: orange;
+    background-image: url(https://thumbs.dreamstime.com/b/empty-wooden-photo-frame-farm-background-empty-wooden-photo-frame-paddy-farm-background-111650526.jpg);
+	background-size: cover;
 }
 .logindiv{
 		display: block;
-	background-color: rgb(255, 178, 102);
+	background-color: rgb(255, 255, 255);
 	width: 320px;
 	height: auto;
 	text-align: center;
